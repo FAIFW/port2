@@ -19,8 +19,26 @@
         left: 1.95em;
     }
 
-    .spin__text {
-        top: initial;
-        bottom: 6em;
+    &__twister {
+        width: 126px;
+        height: 126px;
+
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .spin__text {
+            top: 63px;
+            left: 63px;
+        }
     }
 }

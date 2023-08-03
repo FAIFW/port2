@@ -4,7 +4,7 @@
 
     &__h3 {
         font-family: $font-accent;
-        @include fonty(1.5rem, 600, 2rem);
+        @include fonty(1.5rem, 400, 2rem);
         color: $title-color;
         padding: 0.5em 0;
     }
@@ -20,7 +20,6 @@
 
         p {
             &:nth-child(2) {
-                //Montserat????
                 @include fonty(0.7rem, 400, 0.85rem);
                 padding: 0.5em 0;
             }

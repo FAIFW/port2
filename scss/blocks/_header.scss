@@ -17,6 +17,11 @@
         position: absolute;
         top: 1.35em;
         left: 1.95em;
+        font-family: $font-accent;
+
+        span {
+            color: $title-color;
+        }
     }
 
     &__twister {

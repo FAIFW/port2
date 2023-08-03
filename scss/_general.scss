@@ -4,7 +4,7 @@
   font-family: 'Gilroy';
   src:
     url("../font/gilroy-regular.woff2") format("woff2"),
-    url("../fonts/gilroy-regular.woff") format("woff");
+    url("../font/gilroy-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 @font-face {
   font-family: 'Gilroy';
   src:
-    url("../font/gilroy-medium.ttf") format ("ttf"),
+    url("../font/gilroy-medium.ttf") format("ttf"),
     url("../font/gilroy-medium.woff2") format("woff2"),
     url("../font/gilroy-medium.woff") format("woff");
   font-weight: 500;
@@ -28,6 +28,17 @@
   src:
     url("../font/gilroy-semibold.woff2") format("woff2"),
     url("../font/gilroy-semibold.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vibes';
+  src:
+    url("../font/vibes.ttf") format("ttf"),
+    url("../font/vibes.woff2") format("woff2"),
+    url("../font/vibes.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -69,14 +80,14 @@ button {
 
 h1 {
   font-family: $font-accent;
-  @include fonty(1.5rem, 600, 2rem);
+  @include fonty(1.5rem, 400, 2rem);
   color: $title-color;
   padding: 0.7em 0;
 }
 
 .h2 {
   font-family: $font-accent;
-  @include fonty(1.5rem, 600, 2rem);
+  @include fonty(1.5rem, 400, 2rem);
   color: $title-color;
   padding: 0.5em 0;
 }

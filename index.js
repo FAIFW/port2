@@ -49,13 +49,11 @@ function getTimeRemaining(endtime) {
     };
 }
 
-
 function initializeClock(selector, endtime) {
     let clock = document.querySelector(selector);
     let timeinterval = setInterval(function () {
 
         let t = getTimeRemaining(endtime);
-        console.log(t);
         clock.innerHTML = `Дней: ${t.days} : часов: ${t.hours} : минут : ${t.minutes}`;
         if (t.total <= 0) {
             clearInterval(timeinterval);
@@ -65,5 +63,5 @@ function initializeClock(selector, endtime) {
 
 initializeClock('.second__timer', weddingDay);
 
-
+//      let;s try to optimize code
 //const timeInterval = setInterval(function () { ... }, 1000);

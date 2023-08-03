@@ -1,13 +1,8 @@
 "use strict";
 //      header's text spiner
 const headerSpiner = function () {
-
-
-
     const text = document.querySelector('.spin__text');
-
     text.innerHTML = text.textContent.replace(/\S/g, '<span>$&</span>');
-
     const letters = document.querySelectorAll('p.spin__text span');
 
     for (let i = 0; i < letters.length; i++) {
@@ -49,19 +44,37 @@ function getTimeRemaining(endtime) {
     };
 }
 
-function initializeClock(selector, endtime) {
-    let clock = document.querySelector(selector);
-    let timeinterval = setInterval(function () {
+//      let;s try to optimize code
+function initializetimer(selector, endtime) {
+    let timer = document.querySelector(selector);
 
+    const daysSpan = timer.querySelector('.days');
+    const hoursSpan = timer.querySelector('.hours');
+    const minutesSpan = timer.querySelector('.minutes');
+
+    function updatetimer() {
         let t = getTimeRemaining(endtime);
-        clock.innerHTML = `Дней: ${t.days} : часов: ${t.hours} : минут : ${t.minutes}`;
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+
         if (t.total <= 0) {
-            clearInterval(timeinterval);
+            clearInterval(timeInterval);
         }
-    }, 1000);
+    }
+
+    updatetimer();
+    const timeInterval = setInterval(updatetimer, 1000);
 }
 
-initializeClock('.second__timer', weddingDay);
+initializetimer('.second__timer', weddingDay);
 
-//      let;s try to optimize code
-//const timeInterval = setInterval(function () { ... }, 1000);
+
+
+
+
+
+
+
+
+

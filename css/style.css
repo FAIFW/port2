@@ -370,7 +370,7 @@ template {
 html {
   font-family: "Gilroy", serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: calc(20px + 15 * (100vw - 375px) / 1920);
   min-width: 320px;
 }
 
@@ -456,6 +456,18 @@ h1 {
   left: 63px;
 }
 
+@media (min-width: 768px) {
+  .header {
+    margin: 0 auto;
+    width: 57%;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    margin: 0 auto;
+    width: 37%;
+  }
+}
 .second {
   text-align: center;
   padding: 1em 0;
@@ -573,9 +585,14 @@ h1 {
   line-height: 1rem;
   padding-bottom: 1em;
 }
-.dress-code img {
-  margin: 0 auto;
-  width: 99%;
+.dress-code picture {
+  display: inline-block;
+}
+.dress-code picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /*
@@ -642,7 +659,7 @@ h1 {
   top: 100px;
   left: 100px;
   color: black;
-  font-size: 0.7em;
+  font-size: 14px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -665,8 +682,8 @@ h1 {
 }
 .spin__text span:first-child, .spin__text span:nth-child(13) {
   color: red;
-  width: 0.5em;
-  height: 0.5em;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: red;
   margin-top: 5px;
@@ -706,4 +723,17 @@ h1 {
   -o-object-fit: contain;
      object-fit: contain;
   vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    margin: 0 auto;
+    width: 57%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    margin: 0 auto;
+    width: 37%;
+  }
 }/*# sourceMappingURL=style.css.map */
